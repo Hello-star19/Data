@@ -1,0 +1,49 @@
+import numpy as np
+
+sample_list = [1,2,3,4,5]
+print((f"{type(sample_list)}\n"))
+
+# convert a list to an array
+numpy_array = np.array(sample_list)
+print(f"{type(numpy_array)}\n")
+
+# creating a numpy array of zeroes
+zeroes_array = np.zeros(5)
+print(f"\nzeros array: \n{zeroes_array}\n")
+
+zeros = np.zeros((4,2,3),dtype=int)  # 4 blocks 2 rows and 3 columns 
+print(f"\nzeros array: \n{zeros}\n")
+
+ones_array = np.ones(5)
+print(f"Ones array : \n{ones_array}\n")
+
+ones = np.ones((5,3,3),dtype=int) # by default the data type is a float
+print(f"Ones:\n{ones}\n")
+
+# specifing the data type during instatiation
+float_array = np.array([1,2,3,4,5],dtype="f")
+print(f"float array: \n{float_array}\n")
+
+twod_array = np.array([[1,2],[3,4]])
+print("\ntwod array: ")
+print(twod_array,"\n")
+
+#twod_array_error = np.array([[1,2],[3]])
+#print(twod_array_error,"\n") # error
+# in mulitidimensial array columns must be the same in all the rows
+
+# ndim, showing th
+print(f"dimensions of the ones: {ones.ndim}\n") 
+print(f"dimensions of the twod_array: {twod_array.ndim}\n")
+
+# shape
+print(f"shape of ones array= {ones.shape}\n")
+print(f"shape of twod_array = {twod_array.shape}\n")
+
+# get an array of numbers 1-20
+
+numpy_array=np.arange(1,21)
+print(f"get an array 1-20: {numpy_array}\n")
+
+even_array = np.arange(2,101,2)
+print(f"{even_array}\n")
