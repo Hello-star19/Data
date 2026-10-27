@@ -43,7 +43,72 @@ print(f"shape of twod_array = {twod_array.shape}\n")
 # get an array of numbers 1-20
 
 numpy_array=np.arange(1,21)
-print(f"get an array 1-20: {numpy_array}\n")
+print(f"get an array 1-20: {numpy_array}\n") # .arrange gives an array between given range
 
 even_array = np.arange(2,101,2)
 print(f"{even_array}\n")
+
+"""
+linespace():
+this function creates an array containing fixed number of numbers between two 
+specific numbers such that difference between any two consecutive numbers in the 
+array is constant
+
+"""
+array2=np.linspace(1,25,4)
+print(array2)
+
+# reshape the array so that it has 6 rows and 4 columns 
+print(f"Before Reshaping:\n{zeros}\n ")
+reshaped_zeros=zeros.reshape(6,4)
+print(f"After reshaping:\n{reshaped_zeros}\n")
+# before and after reshaping the total number of products should be the same 
+
+""" ndarray():  This function takes two inputs the first input is the configuration
+of the required array and the second input is the data type of items """
+
+array3 = np.ndarray((5,2), dtype=int)
+print(array3,"\n")
+
+#syntax: np.random.randint(num1,num2,size=N)
+
+array4= np.random.randint(50,100,size=15)
+print(array4, "\n")
+
+array5= np.random.randint(11,20,5)
+print(array5,"\n")
+
+#create a two dimensional array containing 15 random integers between 50-100
+array6_2d = np.random.randint(50,100,size=(5,3))
+print(array6_2d,"\n")
+
+# create a 3 dimensional array containing 40 random integers between 50-100
+array7_3d =  np.random.randint(50,100,size=(5,2,4))
+print(array7_3d,"\n")
+
+array1 = np.arange(10,20,2)
+print(array1,"\n")
+print(np.random.permutation(array1),"\n")# shuffles the array1 items
+
+
+# convert a python list into an array using an array function
+array8 = np.array([i for i in range(1,21)])
+print(array8,"\n")
+print(type(array8),"\n")
+
+#converting an array into a list
+list8 = list(array8)
+print(type(list8),"\n")
+
+""" create a function which takes the lenghts of a sides of a triangle and checks 
+wether the lengths indeed represent the lengths of the sides of a triangle"""
+
+def triangle(a,b,c):
+    if((a+b>c) and (b + c>a) and (c+a>b)):
+        print("It can form a triangle")
+    else:
+        print("It cannot form a triangle")
+
+print(triangle(10,7,12))
+
+print(triangle(1,7,12))
